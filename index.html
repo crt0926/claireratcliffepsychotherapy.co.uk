@@ -938,8 +938,10 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
               </ul>
             </div>
             <div style="background:var(--light);padding:1.5rem">
-              <div style="font-size:.82rem;color:var(--mid);margin-bottom:1rem;line-height:1.7">Booking is handled through the calendar below. Get in touch first if you have questions about the next programme start date.</div>
-              <span class="btn bdk" style="display:block;text-align:center;margin-bottom:.8rem" onclick="sbt('group-therapy')">Book your place →</span>
+              <div style="font-size:.82rem;color:var(--mid);margin-bottom:1rem;line-height:1.7">Book your place using the calendar below. Get in touch first if you have questions about the next programme start date.</div>
+              <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94021519"
+                width="100%" height="480" frameBorder="0" allow="payment"
+                style="border:1px solid var(--border);display:block;margin-bottom:.8rem"></iframe>
               <span class="btn bot" style="display:block;text-align:center" onclick="sp('contact')">Ask a question first</span>
             </div>
           </div>
@@ -1213,7 +1215,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
             <div class="fg"><label>What brings you to therapy? (optional)</label><textarea></textarea></div>
             <div class="cr"><input type="checkbox" id="in1"><label for="in1">I would like to receive marketing updates from Claire Ratcliffe Psychotherapy.</label></div>
             <p class="fn">Data processed in accordance with GDPR and our privacy policy.</p>
-            <br><button class="btn bdk" onclick="sf('Your intensive enquiry has been received. I will be in touch within 2 working days.')">Send enquiry →</button>
+            <br><button class="btn bdk" onclick="submitIntensiveEnquiry(event)">Send enquiry →</button>
           </div></div>
         </div>
       </div>
@@ -1292,81 +1294,95 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
 
   <!-- ── TAB: INDIVIDUAL SUPERVISION ─────────────────────── -->
   <div class="thpanel active" id="tthp-supervision">
-    <section style="padding:3.5rem 0 2rem">
+
+    <!-- Intro: image left, text right -->
+    <section style="padding:3.5rem 0 2.5rem">
       <div class="w">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+          <div style="overflow:hidden">
+            <img src="img-therapists-session.jpg" alt="Individual clinical supervision online"
+              style="width:100%;aspect-ratio:4/3;object-fit:cover" onerror="this.style.display='none'"/>
+          </div>
           <div>
             <span class="lbl">Option 01 — One-to-one</span>
             <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.2rem);margin-bottom:1rem">Individual Supervision</h2>
             <div class="dv"></div>
             <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-bottom:.9rem">One-to-one clinical supervision for qualified and trainee therapists. Supervision training completed at The Manchester Institute for Psychotherapy (2015), with further training in Group Supervision and a certificate in LGBTQ+ informed Supervision.</p>
-            <p style="color:var(--mid);font-size:.9rem;line-height:1.88">Supervision is not only for exploring client work but also for support for the practitioner's own wellbeing — including vicarious trauma, burnout, compassion fatigue, building your practice, and imposter syndrome.</p>
-          </div>
-          <div style="overflow:hidden">
-            <img src="img-therapists-session.jpg" alt="Individual clinical supervision online" style="width:100%;aspect-ratio:4/3;object-fit:cover" onerror="this.style.display='none'"/>
+            <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-bottom:1.2rem">Supervision is not only for exploring client work but also for support for the practitioner's own wellbeing — including vicarious trauma, burnout, compassion fatigue, building your practice, and imposter syndrome.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+              <div style="background:var(--charcoal);color:var(--white);padding:1.4rem;text-align:center">
+                <div style="font-family:var(--serif);font-size:2.2rem;line-height:1">£100</div>
+                <div style="font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.3rem">60 minute session</div>
+              </div>
+              <div style="background:var(--charcoal);color:var(--white);padding:1.4rem;text-align:center">
+                <div style="font-family:var(--serif);font-size:2.2rem;line-height:1">£150</div>
+                <div style="font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.3rem">90 minute session</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section style="padding:1rem 0 3rem">
+    <!-- Who it's for + Approach -->
+    <section style="padding:0 0 2rem">
       <div class="w">
-        <div style="display:grid;grid-template-columns:3fr 2fr;gap:3rem;align-items:start">
-          <div>
-            <div style="margin-bottom:1.5rem;background:var(--white);border:1px solid var(--border);padding:1.8rem">
-              <div style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:.8rem;font-weight:600">Book — 60 minute supervision</div>
-              <p style="font-size:.82rem;color:var(--mid);margin-bottom:1rem;line-height:1.7">£100 · Select a date and time below. Payment taken at booking via Stripe.</p>
-              <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94021030" width="100%" height="500" frameBorder="0" allow="payment" style="border:1px solid var(--border);display:block"></iframe>
-            </div>
-            <div style="margin-bottom:1.5rem;background:var(--white);border:1px solid var(--border);padding:1.8rem">
-              <div style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:.8rem;font-weight:600">Book — 90 minute supervision</div>
-              <p style="font-size:.82rem;color:var(--mid);margin-bottom:1rem;line-height:1.7">£150 · Select a date and time below. Payment taken at booking via Stripe.</p>
-              <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=96720620" width="100%" height="500" frameBorder="0" allow="payment" style="border:1px solid var(--border);display:block"></iframe>
-            </div>
-          <div class="thcard" style="margin-bottom:1.5rem">
-              <div class="thcard-top">
-                <h3>Who is it for?</h3>
-                <ul style="margin:.8rem 0 0 1rem;font-size:.88rem;color:var(--mid);line-height:2">
-                  <li>Qualified therapists in private practice</li>
-                  <li>Trainees on courses and clinical placements</li>
-                  <li>NHS practitioners</li>
-                  <li>Specialists in drug &amp; alcohol, eating disorders and other settings</li>
-                  <li>LGBTQ+ informed supervision available</li>
-                  <li>All sessions online via Zoom</li>
-                </ul>
-              </div>
-            </div>
-            <div class="thcard">
-              <div class="thcard-top">
-                <h3>Approach</h3>
-                <p>Supervision draws primarily on Transactional Analysis, Relational and Integrative approaches, and the Developmental Model for Couples Therapy. The approach is adapted to the needs of each supervisee and their client work.</p>
-                <p style="margin-top:.7rem;font-size:.85rem;color:var(--mid)">New to couples work? No problem — supervisees at all stages of experience with couples are welcome.</p>
-              </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem">
+          <div class="thcard">
+            <div class="thcard-top">
+              <h3>Who is it for?</h3>
+              <ul style="margin:.8rem 0 0 1rem;font-size:.88rem;color:var(--mid);line-height:2">
+                <li>Qualified therapists in private practice</li>
+                <li>Trainees on courses and clinical placements</li>
+                <li>NHS practitioners</li>
+                <li>Specialists in drug &amp; alcohol, eating disorders and other settings</li>
+                <li>LGBTQ+ informed supervision available</li>
+                <li>All sessions online via Zoom</li>
+              </ul>
             </div>
           </div>
+          <div class="thcard">
+            <div class="thcard-top">
+              <h3>Approach</h3>
+              <p>Supervision draws primarily on Transactional Analysis, Relational and Integrative approaches, and the Developmental Model for Couples Therapy. The approach is adapted to the needs of each supervisee and their client work.</p>
+              <p style="margin-top:.8rem;font-size:.85rem;color:var(--mid)">New to couples work? No problem — supervisees at all stages of experience with couples are welcome.</p>
+            </div>
+          </div>
+        </div>
 
-          <div>
-            <div style="background:var(--charcoal);color:var(--white);padding:2rem;margin-bottom:1rem">
-              <div style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-lt);margin-bottom:.8rem">Session fees</div>
-              <div style="font-family:var(--serif);font-size:3rem;line-height:1;margin-bottom:.2rem">£100</div>
-              <div style="font-size:.82rem;color:rgba(255,255,255,.5);margin-bottom:1rem">per 60 minute session</div>
-              <div style="font-family:var(--serif);font-size:2rem;line-height:1;margin-bottom:.2rem">£150</div>
-              <div style="font-size:.82rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem">per 90 minute session</div>
-              <div style="border-top:1px solid rgba(255,255,255,.12);padding-top:1rem;font-size:.82rem;color:rgba(255,255,255,.5)">By enquiry only — get in touch to discuss availability and schedule.</div>
-            </div>
-            <div style="margin-top:1rem">
-              <div style="font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-lt);margin-bottom:.5rem">Book — 60 minute session · £100</div>
-              <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94021030" width="100%" height="400" frameBorder="0" allow="payment" style="border:1px solid rgba(255,255,255,.1);display:block;margin-bottom:1.2rem"></iframe>
-              <div style="font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-lt);margin-bottom:.5rem">Book — 90 minute session · £150</div>
-              <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=96720620" width="100%" height="400" frameBorder="0" allow="payment" style="border:1px solid rgba(255,255,255,.1);display:block"></iframe>
-            </div>
-            <div style="margin-top:1rem;padding:.9rem 1rem;background:rgba(255,255,255,.06);font-size:.83rem;color:rgba(255,255,255,.55)">Have a question first? <a onclick="sp('contact')" style="color:var(--sage-lt);cursor:pointer;text-decoration:underline">Get in touch →</a></div>
+        <!-- Image break -->
+        <div style="width:100%;overflow:hidden;margin-bottom:2.5rem">
+          <img src="img-therapy-supervision-bg.jpg" alt=""
+            style="width:100%;height:280px;object-fit:cover;object-position:center 40%"
+            onerror="this.style.display='none'"/>
+        </div>
+
+        <!-- Booking calendars -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+          <div style="background:var(--white);border:1px solid var(--border);padding:1.8rem">
+            <div style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:.5rem;font-weight:600">Book — 60 minute session · £100</div>
+            <p style="font-size:.82rem;color:var(--mid);margin-bottom:1rem;line-height:1.7">Payment taken at booking via Stripe. 48 hours notice to cancel.</p>
+            <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94021030"
+              width="100%" height="480" frameBorder="0" allow="payment"
+              style="border:1px solid var(--border);display:block"></iframe>
           </div>
+          <div style="background:var(--white);border:1px solid var(--border);padding:1.8rem">
+            <div style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:.5rem;font-weight:600">Book — 90 minute session · £150</div>
+            <p style="font-size:.82rem;color:var(--mid);margin-bottom:1rem;line-height:1.7">Payment taken at booking via Stripe. 48 hours notice to cancel.</p>
+            <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=96720620"
+              width="100%" height="480" frameBorder="0" allow="payment"
+              style="border:1px solid var(--border);display:block"></iframe>
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem;background:var(--light);padding:1rem 1.4rem;border-left:3px solid var(--sage);font-size:.84rem;color:var(--mid)">
+          Have a question before booking? <a onclick="sp('contact')" style="color:var(--sage);cursor:pointer">Get in touch →</a>
         </div>
       </div>
     </section>
   </div>
 
+  <!-- ── TAB: SMALL GROUP SUPERVISION
   <!-- ── TAB: SMALL GROUP SUPERVISION ─────────────────────── -->
   <div class="thpanel" id="tthp-group">
     <section style="padding:3.5rem 0 2rem">
@@ -1376,7 +1392,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
             <span class="lbl">Option 02 — Small group · 6 months</span>
             <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.2rem);margin-bottom:1rem">Small Group — Supervision</h2>
             <div class="dv"></div>
-            <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-bottom:.9rem">Fixed 6-month online supervision groups for therapists working with couples and relationship clients. Small by design — maximum 6 participants — allowing for the depth of reflection that good supervision requires.</p>
+            <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-bottom:.9rem">Fixed 6-month online supervision groups for therapists working with couples and relationship clients. One 2-hour session per month — small by design, maximum 6 participants, allowing for the depth of reflection that good supervision requires.</p>
             <p style="color:var(--mid);font-size:.9rem;line-height:1.88">A structured, confidential group offering peer connection alongside clinical guidance. All sessions take place online via Zoom and are not recorded.</p>
           </div>
           <div style="overflow:hidden">
@@ -1394,7 +1410,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
               <div class="thcard-top">
                 <h3>What's included</h3>
                 <ul style="margin:.8rem 0 0 1rem;font-size:.88rem;color:var(--mid);line-height:2">
-                  <li>2 live online sessions per month (1.5–2 hours each)</li>
+                  <li>1 live online session per month (2 hours)</li>
                   <li>Maximum 6 participants per group</li>
                   <li>Minimum 4 participants required to run</li>
                   <li>Fixed 6-month commitment</li>
@@ -1424,7 +1440,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
               <div style="font-family:var(--serif);font-size:3rem;line-height:1;margin-bottom:.3rem">£480</div>
               <div style="font-size:.82rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem">one-off · full 6-month block</div>
               <ul style="list-style:none;font-size:.82rem;color:rgba(255,255,255,.65);line-height:2;border-top:1px solid rgba(255,255,255,.12);padding-top:1rem">
-                <li>✓ 2 sessions per month</li>
+                <li>✓ 1 session per month</li>
                 <li>✓ 6 months total</li>
                 <li>✓ Max 6 participants</li>
                 <li>✓ Online via Zoom</li>
@@ -2706,6 +2722,36 @@ async function sendContactForm(e){
   }
   btn.textContent = 'Send message →';
   btn.disabled = false;
+}
+
+async function submitIntensiveEnquiry(e){
+  e.preventDefault();
+  const btn=e.target;
+  btn.textContent='Sending...';btn.disabled=true;
+  const fields={
+    name: (document.getElementById('cf-name')||{}).value||'',
+    last_name: (document.getElementById('cf-lname')||{}).value||'',
+    email: (document.getElementById('cf-email')||{}).value||'',
+    phone: (document.getElementById('cf-phone')||{}).value||'',
+    enquiry_type: (document.getElementById('cf-enquiry')||{}).value||'',
+    _subject: 'Couples Intensive Enquiry — Claire Ratcliffe Psychotherapy',
+  };
+  try{
+    const res=await fetch('https://formspree.io/f/xrpglpyp',{
+      method:'POST',
+      body:JSON.stringify(fields),
+      headers:{'Accept':'application/json','Content-Type':'application/json'}
+    });
+    if(res.ok){
+      sf('Your enquiry has been received. Claire will be in touch within 2 working days.');
+      ['cf-name','cf-lname','cf-email','cf-phone','cf-enquiry'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+    }else{
+      sf('Something went wrong — please email claireratcliffetherapy@gmail.com directly.');
+    }
+  }catch(err){
+    sf('Something went wrong — please email claireratcliffetherapy@gmail.com directly.');
+  }
+  btn.textContent='Send enquiry →';btn.disabled=false;
 }
 </script>
 </body>
