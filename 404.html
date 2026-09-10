@@ -295,6 +295,10 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
   .fi2{grid-template-columns:1fr}.ai{max-width:360px}
   .ih-split{grid-template-columns:1fr;padding-top:64px}.ih-split-r{min-height:260px}.ih-split-l{padding:3rem 0 2rem}
   #therapist-cards{grid-template-columns:1fr}#therapist-options{grid-template-columns:1fr}
+  /* phones: collapse any inline multi-column grid, un-stick side images */
+  main [style*="grid-template-columns"]{grid-template-columns:1fr!important;gap:1.5rem!important}
+  main [style*="position:sticky"]{position:static!important}
+  main [style*="grid-template-columns"] > div[style*="text-align:right"]{text-align:left!important}
 }
 
 /* ── THERAPY TABS ─────────────────────────────── */
@@ -486,12 +490,11 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
   <a href="index.html">Home</a>
   <a href="about.html">About Me</a>
   <a href="therapy.html">Therapy</a>
+  <a href="for-therapists.html">For Therapists</a>
+  <a href="fees.html">Fees</a>
   <a href="contact.html">Contact</a>
   <a href="mailing-list.html">Mailing List</a>
-  <div class="mml">Book &amp; Join</div>
   <a href="book.html" style="color:var(--sage)">Book a Session</a>
-  <a href="for-therapists.html" style="color:var(--sage)">For Therapists</a>
-  <div class="mml">Legal &amp; Info</div>
   <a href="faq.html">FAQs</a>
   <a href="privacy-policy.html">Privacy Policy</a>
   <a href="terms.html">Terms &amp; Conditions</a>
