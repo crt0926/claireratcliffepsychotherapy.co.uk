@@ -268,6 +268,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
 .fc2 ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
 .fc2 ul a{font-size:.8rem;cursor:pointer;transition:color .2s}
 .fc2 ul a:hover{color:var(--white)}
+.fsoc{display:flex;flex-wrap:wrap;gap:.3rem 1.1rem;margin-top:1.1rem}.fsoc a{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:2px}.fsoc a:hover{color:var(--white);border-color:var(--white)}
 .fbo{border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem;display:flex;justify-content:space-between;align-items:center;font-size:.74rem;flex-wrap:wrap;gap:.8rem}
 
 /* MODAL */
@@ -455,7 +456,7 @@ nav{top:4px}
             <option value="sup-90">Individual supervision — 90 min (£150)</option>
           </optgroup>
           <optgroup label="Enquiry Only">
-            <option value="intensive">Couples intensive — enquiry (from £520)</option>
+            <option value="intensive">Couples intensive — enquiry (from £540)</option>
           </optgroup>
         </select>
       </div>
@@ -630,16 +631,17 @@ nav{top:4px}
       <div class="bk-panel" id="bk-intensive">
         <div style="background:var(--off);border-top:3px solid var(--sage);padding:1.8rem;margin-bottom:1.5rem">
           <span class="lbl" style="margin-bottom:.2rem">Couples Therapy Intensive</span>
-          <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.8rem)">Bookings by enquiry only · <span style="color:var(--sage)">from £520</span></h2>
+          <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.8rem)">Bookings by enquiry only · <span style="color:var(--sage)">from £540</span></h2>
+          <p style="margin-top:.8rem;font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--charcoal)">"The best investment you can make is in the time, love and effort you give to your relationship."</p>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
           <div>
             <p style="font-size:.92rem;color:var(--mid);line-height:1.88;margin-bottom:1.2rem">Intensive sessions are arranged directly — get in touch to discuss your needs, availability and which package is right for you. I will respond within 2 working days.</p>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:0;margin-bottom:1.5rem">
-              <li style="display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--mid)"><span>3 hours</span><span style="font-family:var(--serif);font-size:1.2rem;color:var(--charcoal)">£520</span></li>
+              <li style="display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--mid)"><span>3 hours</span><span style="font-family:var(--serif);font-size:1.2rem;color:var(--charcoal)">£540</span></li>
               <li style="display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--mid)"><span>1 day</span><span style="font-family:var(--serif);font-size:1.2rem;color:var(--charcoal)">£910</span></li>
               <li style="display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--mid)"><span>2 days</span><span style="font-family:var(--serif);font-size:1.2rem;color:var(--charcoal)">£1,850</span></li>
-              <li style="display:flex;justify-content:space-between;padding:.6rem 0;font-size:.88rem;color:var(--mid)"><span>3 days + follow-up</span><span style="font-family:var(--serif);font-size:1.2rem;color:var(--charcoal)">£2,800</span></li>
+              <li style="display:flex;justify-content:space-between;padding:.6rem 0;font-size:.88rem;color:var(--mid)"><span>3 days + follow-up</span><span style="font-family:var(--serif);font-size:1.2rem;color:var(--charcoal)">£2,850</span></li>
             </ul>
           </div>
           <div><form class="fp" onsubmit="submitIntensiveEnquiry(event)">
@@ -649,7 +651,7 @@ nav{top:4px}
             <div class="fr"><div class="fg"><label for="ci-pname">Partner's first name</label><input type="text" id="ci-pname" name="partner_first_name"/></div><div class="fg"><label for="ci-plname">Partner's last name</label><input type="text" id="ci-plname" name="partner_last_name"/></div></div>
             <div class="fg"><label for="ci-email">Email *</label><input type="email" required id="ci-email" name="email"/></div>
             <div class="fg"><label for="ci-phone">Phone</label><input type="tel" id="ci-phone" name="phone"/></div>
-            <div class="fg"><label for="ci-package">Package of interest</label><select id="ci-package" name="package_of_interest"><option value="">Please select</option><option>3 hours — £520</option><option>1 day — £910</option><option>2 days — £1,850</option><option>3 days (inc. follow-up) — £2,800</option><option>Not sure yet</option></select></div>
+            <div class="fg"><label for="ci-package">Package of interest</label><select id="ci-package" name="package_of_interest"><option value="">Please select</option><option>3 hours — £540</option><option>1 day — £910</option><option>2 days — £1,850</option><option>3 days (inc. follow-up) — £2,850</option><option>Not sure yet</option></select></div>
             <div class="fg"><label for="ci-message">What brings you to therapy? (optional)</label><textarea id="ci-message" name="message"></textarea></div>
             <div class="cr"><input type="checkbox" id="in1" name="marketing_consent"><label for="in1">I would like to receive marketing updates from Claire Ratcliffe Psychotherapy.</label></div>
             <p class="fn">Data processed in accordance with GDPR and our <a href="privacy-policy.html" style="color:var(--sage)">privacy policy</a>.</p>
@@ -667,15 +669,14 @@ nav{top:4px}
         <div class="fb2">
           <h3>Claire Ratcliffe Psychotherapy</h3>
           <p>Confidential online therapy, supervision and professional learning for therapists working with couples and relationships.</p>
-          <p style="margin-top:.8rem;font-size:.78rem;color:rgba(255,255,255,.4)">claireratcliffetherapy@gmail.com<br>07830 906822</p>
+          <p style="margin-top:.8rem;font-size:.78rem;color:rgba(255,255,255,.4)">claireratcliffetherapy@gmail.com<br>07830 906822</p><div class="fsoc"><a href="https://www.instagram.com/cr_psychotherapy/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/CRPsych" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@cr_psychotherapy" target="_blank" rel="noopener">TikTok</a><a href="https://uk.linkedin.com/in/claire-ratcliffe-psychotherapy-6338175a" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@CR_Psychotherapy" target="_blank" rel="noopener">YouTube</a><a href="https://podcasts.apple.com/gb/podcast/healing-relationships-with-ourselves-others-the-world/id1839908625" target="_blank" rel="noopener">Podcast</a></div>
         </div>
         <div class="fc2"><h4>Therapy</h4><ul>
           <li><a href="lgbtqia.html">LGBTQIA+ Affirming Therapy</a></li>
         <li><a href="therapy.html">Individual Therapy</a></li>
           <li><a href="therapy.html">Couples &amp; Relationship</a></li>
           <li><a href="therapy.html">Sex Therapy</a></li>
-          <li><a href="therapy.html">LGBTQIA+ Affirming</a></li>
-          <li><a href="therapy.html">Couples Intensive</a></li>
+            <li><a href="therapy.html">Couples Intensive</a></li>
         </ul></div>
         <div class="fc2"><h4>For Therapists</h4><ul>
           <li><a href="for-therapists.html#supervision">Individual Supervision</a></li>
