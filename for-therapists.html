@@ -330,6 +330,22 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
 }
 .nlinks a.cur{color:var(--charcoal)}
 .nlinks a.cur::after{content:"";display:block;height:1px;background:var(--sage);margin-top:2px}
+
+/* ── LGBTQIA+ affirming accents (draft) ─────────────── */
+:root{--pride:linear-gradient(90deg,#c9463d 0%,#d9812f 17%,#d4b23a 34%,#6b7f5e 51%,#3f7fa3 68%,#7d5aa0 85%,#c8637f 100%);
+      --pride-soft:linear-gradient(90deg,#f3d9d6,#f6e3cf,#f4ecc9,#e3e8dd,#d7e4ec,#e3dbec,#f2dbe2);}
+.pride-bar{position:fixed;top:0;left:0;right:0;height:4px;background:var(--pride);z-index:101}
+nav{top:4px}
+.mm{top:68px}
+.nlinks a.nq{color:var(--charcoal);position:relative;padding-bottom:.35rem}
+.nlinks a.nq::after{content:"";position:absolute;left:.8rem;right:.8rem;bottom:0;height:2px;background:var(--pride)}
+.mm a.nq{background:var(--pride);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:500}
+.dv.pride{height:2px;width:56px;background:var(--pride)}
+.pride-edge{border-top:3px solid transparent;border-image:var(--pride) 1}
+.pride-chip{display:inline-block;padding:.3rem .8rem;font-size:.74rem;letter-spacing:.06em;border:1px solid var(--border);background:var(--white);margin:0 .35rem .45rem 0}
+.pride-wash{background:var(--pride-soft)}
+.pride-quote{border-left:3px solid transparent;border-image:var(--pride) 1;padding-left:1.2rem}
+.rb{display:inline-flex;gap:3px;vertical-align:middle;margin-left:.5rem}.rb i{width:7px;height:7px;border-radius:50%;display:block}
 </style>
   <!-- Primary SEO -->
   <title>Clinical Supervision for Couples &amp; Relationship Therapists | Claire Ratcliffe</title>
@@ -425,12 +441,14 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
 </head>
 <body>
 <!-- NAV -->
+<div class="pride-bar" aria-hidden="true"></div>
 <nav id="nav">
   <div class="logo" onclick="sp('home')">Claire Ratcliffe Psychotherapy</div>
   <ul class="nlinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Me</a></li>
     <li><a href="therapy.html">Therapy</a></li>
+    <li><a href="lgbtqia.html" class="nq">LGBTQIA+</a></li>
     <li><a href="for-therapists.html">For Therapists</a></li>
     <li><a href="fees.html">Fees</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -444,6 +462,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
   <a href="index.html">Home</a>
   <a href="about.html">About Me</a>
   <a href="therapy.html">Therapy</a>
+  <a href="lgbtqia.html" class="nq">LGBTQIA+ Affirming</a>
   <a href="for-therapists.html">For Therapists</a>
   <a href="fees.html">Fees</a>
   <a href="contact.html">Contact</a>
@@ -685,6 +704,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
     <div class="fi2">
       <div class="fb2"><h3>Claire Ratcliffe Psychotherapy</h3><p>Confidential online therapy, supervision and professional learning for therapists working with couples and relationships.</p><p style="margin-top:1rem;font-size:.78rem">claireratcliffetherapy@gmail.com<br>07830 906822</p></div>
       <div class="fc2"><h4>Therapy</h4><ul>
+        <li><a href="lgbtqia.html">LGBTQIA+ Affirming Therapy</a></li>
         <li><a href="therapy.html#individual">Individual Therapy</a></li>
         <li><a href="therapy.html#couples">Couples Therapy</a></li>
         <li><a href="therapy.html#couples">Couples Intensive</a></li>

@@ -330,9 +330,25 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
 }
 .nlinks a.cur{color:var(--charcoal)}
 .nlinks a.cur::after{content:"";display:block;height:1px;background:var(--sage);margin-top:2px}
+
+/* ── LGBTQIA+ affirming accents (draft) ─────────────── */
+:root{--pride:linear-gradient(90deg,#c9463d 0%,#d9812f 17%,#d4b23a 34%,#6b7f5e 51%,#3f7fa3 68%,#7d5aa0 85%,#c8637f 100%);
+      --pride-soft:linear-gradient(90deg,#f3d9d6,#f6e3cf,#f4ecc9,#e3e8dd,#d7e4ec,#e3dbec,#f2dbe2);}
+.pride-bar{position:fixed;top:0;left:0;right:0;height:4px;background:var(--pride);z-index:101}
+nav{top:4px}
+.mm{top:68px}
+.nlinks a.nq{color:var(--charcoal);position:relative;padding-bottom:.35rem}
+.nlinks a.nq::after{content:"";position:absolute;left:.8rem;right:.8rem;bottom:0;height:2px;background:var(--pride)}
+.mm a.nq{background:var(--pride);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:500}
+.dv.pride{height:2px;width:56px;background:var(--pride)}
+.pride-edge{border-top:3px solid transparent;border-image:var(--pride) 1}
+.pride-chip{display:inline-block;padding:.3rem .8rem;font-size:.74rem;letter-spacing:.06em;border:1px solid var(--border);background:var(--white);margin:0 .35rem .45rem 0}
+.pride-wash{background:var(--pride-soft)}
+.pride-quote{border-left:3px solid transparent;border-image:var(--pride) 1;padding-left:1.2rem}
+.rb{display:inline-flex;gap:3px;vertical-align:middle;margin-left:.5rem}.rb i{width:7px;height:7px;border-radius:50%;display:block}
 </style>
   <!-- Primary SEO -->
-  <title>Claire Ratcliffe Psychotherapy | Online Couples &amp; Relationship Therapy UK</title>
+  <title>Claire Ratcliffe Psychotherapy | LGBTQIA+ Affirming Therapy &amp; Couples Therapy Online UK</title>
   <meta name="description" content="Online individual, couples and relationship therapy, sex therapy and LGBTQIA+ affirming support across the UK with a UKCP-registered psychotherapist. Supervision for therapists.">
   <meta name="keywords" content="couples therapist online UK, online couples therapy, relationship therapist online, sex therapist online UK, LGBTQ therapist UK, clinical supervision couples therapy, online psychotherapy UK, small group therapy online, group supervision for therapists">
   <meta name="author" content="Claire Ratcliffe Psychotherapy">
@@ -471,12 +487,14 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
 </head>
 <body>
 <!-- NAV -->
+<div class="pride-bar" aria-hidden="true"></div>
 <nav id="nav">
   <div class="logo" onclick="sp('home')">Claire Ratcliffe Psychotherapy</div>
   <ul class="nlinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Me</a></li>
     <li><a href="therapy.html">Therapy</a></li>
+    <li><a href="lgbtqia.html" class="nq">LGBTQIA+</a></li>
     <li><a href="for-therapists.html">For Therapists</a></li>
     <li><a href="fees.html">Fees</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -490,6 +508,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
   <a href="index.html">Home</a>
   <a href="about.html">About Me</a>
   <a href="therapy.html">Therapy</a>
+  <a href="lgbtqia.html" class="nq">LGBTQIA+ Affirming</a>
   <a href="for-therapists.html">For Therapists</a>
   <a href="fees.html">Fees</a>
   <a href="contact.html">Contact</a>
@@ -505,18 +524,18 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
   <section class="hero" style="position:relative;overflow:hidden">
     <div style="position:absolute;inset:0;z-index:0"><img src="img-home-bookcase-bg.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.12" onerror="this.style.display='none'"/></div>
     <div class="hl" style="position:relative;z-index:1">
-      <span class="lbl">Online — UK &amp; International</span>
-      <h1>Psychotherapy,<br>Couples Therapy<br>&amp; <em>Supervision</em></h1>
-      <p class="hsub">Helping you build meaningful relationships — with others and with yourself. Online sessions for individuals, couples and therapists across the UK and internationally.</p>
+      <span class="lbl">LGBTQIA+ affirming · Online — UK &amp; International <span class="rb" aria-hidden="true"><i style="background:#c9463d"></i><i style="background:#d9812f"></i><i style="background:#d4b23a"></i><i style="background:#6b7f5e"></i><i style="background:#3f7fa3"></i><i style="background:#7d5aa0"></i></span></span>
+      <h1>Therapy for <em>queer lives</em>,<br>relationships<br>&amp; the people who hold them</h1>
+      <p class="hsub">Affirming psychotherapy for LGBTQIA+ individuals, couples and multi-partner relationships — and for anyone who wants to build meaningful relationships with others and with themselves. Online, across the UK and internationally. Supervision for therapists too.</p>
       <div class="hacts">
         <a class="btn bdk" href="book.html">Book a session</a>
-        <a class="btn bot" href="therapy.html">About therapy</a>
+        <a class="btn bot" href="lgbtqia.html">LGBTQIA+ affirming therapy</a>
         <a class="btn bots" href="for-therapists.html">For therapists</a>
       </div>
     </div>
-    <div class="hr"><img class="himg" src="img-home-supervision-hero.jpg" alt="" onerror="this.style.display='none'"/></div>
+    <div class="hr"><img class="himg" src="img-lgbtq-home-hero.jpg" alt="" style="object-position:78% 40%" onerror="this.onerror=null;this.src='img-home-supervision-hero.jpg';this.style.objectPosition='center'"/></div>
   </section>
-  <div class="qb"><blockquote>"Until you make the unconscious conscious, it will direct your life and you will call it fate."</blockquote><cite>— Carl Jung</cite></div>
+  <div class="qb" style="position:relative"><div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--pride)"></div><blockquote>"You are welcome here exactly as you are."</blockquote><cite>— Claire · affirming, non-judgemental, queer-informed practice</cite></div>
   <section style="padding:5.5rem 0">
     <div class="w">
       <div style="text-align:center;margin-bottom:3rem">
@@ -525,14 +544,15 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
         <p style="color:var(--mid);font-size:.92rem;max-width:500px;margin:0 auto">Whether you are seeking personal support or developing your clinical practice as a therapist, there is a route for you.</p>
       </div>
       <div class="og">
-        <div class="oc" onclick="sp('therapy')"><div class="onum">01</div><h3>Individual &amp; Couples Therapy</h3><p>Confidential online therapy for individuals, couples and multi-partner relationships — including relationship therapy, sex therapy and LGBTQIA+ affirming support.</p><div class="op">from £120 <span>/ session</span></div><div class="oa">Learn more</div></div>
-        <div class="oc" onclick="sp('therapy')"><div class="onum">02</div><h3>Couples Therapy Intensive</h3><p>A concentrated, immersive experience for couples who want to address relationship issues more quickly than weekly sessions.</p><div class="op">from £520 <span>/ package</span></div><div class="oa">Learn more</div></div>
-        <div class="oc" onclick="location.href='for-therapists.html#supervision'"><div class="onum">03</div><h3>Clinical Supervision</h3><p>Individual and group supervision for qualified and trainee therapists, with specialist focus on couples, relationships and sex therapy.</p><div class="op">from £100 <span>/ session</span></div><div class="oa">Learn more</div></div>
+        <div class="oc pride-edge" onclick="location.href='lgbtqia.html'"><div class="onum" style="background:var(--pride);-webkit-background-clip:text;background-clip:text;color:transparent">01</div><h3>LGBTQIA+ Affirming Therapy</h3><p>Identity, coming out at any age, minority stress, shame, family and faith, gender journeys, queer relationships and sex — with a therapist trained in Gender, Sexual and Relationship Diversity.</p><div class="op">from £120 <span>/ session</span></div><div class="oa">Learn more</div></div>
+        <div class="oc" onclick="sp('therapy')"><div class="onum">02</div><h3>Individual &amp; Couples Therapy</h3><p>Confidential online therapy for individuals, couples and multi-partner relationships — including relationship therapy, sex therapy and LGBTQIA+ affirming support.</p><div class="op">from £120 <span>/ session</span></div><div class="oa">Learn more</div></div>
+        <div class="oc" onclick="sp('therapy')"><div class="onum">03</div><h3>Couples Therapy Intensive</h3><p>A concentrated, immersive experience for couples who want to address relationship issues more quickly than weekly sessions.</p><div class="op">from £520 <span>/ package</span></div><div class="oa">Learn more</div></div>
+        <div class="oc" onclick="location.href='for-therapists.html#supervision'"><div class="onum">04</div><h3>Clinical Supervision</h3><p>Individual and group supervision for qualified and trainee therapists, with specialist focus on couples, relationships and sex therapy.</p><div class="op">from £100 <span>/ session</span></div><div class="oa">Learn more</div></div>
       </div>
       <div class="og" style="margin-top:1px">
         <div class="oc" onclick="sp('book')"><div class="onum" style="color:var(--sage);font-size:2rem">→</div><h3>Book a Session</h3><p>Ready to get started? Book directly into released availability for individual or couples therapy, or enquire about a couples intensive.</p><div class="op" style="font-size:.95rem;color:var(--muted)">New clients welcome</div><div class="oa">Book now</div></div>
         <div class="oc" onclick="sp('therapists')"><div class="onum" style="color:var(--sage);font-size:2rem">→</div><h3>For Therapists</h3><p>Individual and small group supervision, plus Healing Relationships — a new online community for therapists, coming early 2027. Join the mailing list to hear first.</p><div class="op" style="font-size:.95rem;color:var(--muted)">Supervision from £100</div><div class="oa">Explore</div></div>
-        <div class="oc" onclick="sp('group-therapy')"><div class="onum">04</div><h3>Small Group — Therapy</h3><p>A 12-week psychoeducation group exploring boundaries, consent, relationships and self-understanding. Open to everyone — no referral needed.</p><div class="op">£550 <span>/ programme</span></div><div class="oa">Find out more</div></div>
+        <div class="oc" onclick="sp('group-therapy')"><div class="onum">05</div><h3>Small Group — Therapy</h3><p>A 12-week psychoeducation group exploring boundaries, consent, relationships and self-understanding. Open to everyone — no referral needed.</p><div class="op">£550 <span>/ programme</span></div><div class="oa">Find out more</div></div>
         <div class="oc" onclick="sp('contact')"><div class="onum" style="font-size:2rem;color:var(--border)">?</div><h3>Not sure where to start?</h3><p>Send me a message and I can help you find the right route. I aim to respond to all enquiries within 2 working days.</p><div class="op" style="font-size:.88rem;color:var(--muted)">claireratcliffetherapy@gmail.com</div><div class="oa">Get in touch</div></div>
       </div>
   </section>
@@ -555,6 +575,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2
     <div class="fi2">
       <div class="fb2"><h3>Claire Ratcliffe Psychotherapy</h3><p>Confidential online therapy, supervision and professional learning for therapists working with couples and relationships.</p><p style="margin-top:1rem;font-size:.78rem">claireratcliffetherapy@gmail.com<br>07830 906822</p></div>
       <div class="fc2"><h4>Therapy</h4><ul>
+        <li><a href="lgbtqia.html">LGBTQIA+ Affirming Therapy</a></li>
         <li><a href="therapy.html">Individual Therapy</a></li>
         <li><a href="therapy.html">Couples &amp; Relationship Therapy</a></li>
         <li><a href="therapy.html">Sex Therapy</a></li>
