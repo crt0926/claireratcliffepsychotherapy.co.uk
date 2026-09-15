@@ -354,6 +354,8 @@ nav{top:4px}
   <meta name="author" content="Claire Ratcliffe Psychotherapy">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.claireratcliffepsychotherapy.co.uk/therapy.html">
+  <link rel="alternate" hreflang="en" href="https://www.claireratcliffepsychotherapy.co.uk/therapy.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.claireratcliffepsychotherapy.co.uk/therapy.html">
   <meta name="theme-color" content="#1f1f1c">
 
   <!-- Open Graph (social sharing) -->
@@ -381,10 +383,10 @@ nav{top:4px}
     "name": "Claire Ratcliffe Psychotherapy",
     "url": "https://www.claireratcliffepsychotherapy.co.uk/"
   },
-  "areaServed": {
-    "@type": "Country",
-    "name": "United Kingdom"
-  },
+  "areaServed": [
+    {"@type": "Country", "name": "United Kingdom"},
+    "Worldwide (online)"
+  ],
   "availableChannel": {
     "@type": "ServiceChannel",
     "serviceUrl": "https://www.claireratcliffepsychotherapy.co.uk/book.html",
@@ -501,7 +503,7 @@ nav{top:4px}
   <div class="ih"><div class="w"><div class="ih-c">
     <span class="lbl">Individual, Couples &amp; Relationship Therapy</span>
     <h1>Online Therapy for<br><em>Individuals &amp; Couples</em></h1>
-    <p>I offer psychotherapy, couples and relationship therapy, sex therapy and LGBTQIA+ affirming support — all online, across the UK and internationally.</p>
+    <p>I offer psychotherapy, couples and relationship therapy, sex therapy and LGBTQIA+ affirming support — all online, across the UK and worldwide. Many of my clients are British expats and English speakers living abroad.</p>
     <div class="hacts">
       <a class="btn bdk" href="book.html">Book a session</a>
       <a class="btn bot" href="contact.html">Ask a question</a>
@@ -755,6 +757,23 @@ nav{top:4px}
       </div>
     </section>
 </div>
+
+  <!-- International clients -->
+  <section id="international" style="padding:4rem 0;background:var(--off);scroll-margin-top:90px">
+    <div class="w">
+      <div style="max-width:720px;margin:0 auto 2.5rem;text-align:center">
+        <span class="lbl" style="display:block;text-align:center">Wherever you are</span>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.2rem);margin-bottom:1rem">Working with me from outside the UK</h2>
+        <p style="color:var(--mid);font-size:.92rem;line-height:1.88">I work with people all over the world — British expats, English speakers living abroad, and international couples and therapists who want a UK-trained, UKCP-registered psychotherapist. Everything happens online, so the process is the same wherever you are.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+        <div style="background:var(--white);padding:1.8rem"><h3 style="font-family:var(--serif);font-size:1.15rem;margin-bottom:.6rem">Sessions &amp; time zones</h3><p style="font-size:.88rem;color:var(--mid);line-height:1.85">Sessions are held on Zoom. When you book, the calendar shows availability in your own time zone, and your confirmation email includes the Zoom link. Times quoted on this site are UK time (GMT / BST).</p></div>
+        <div style="background:var(--white);padding:1.8rem"><h3 style="font-family:var(--serif);font-size:1.15rem;margin-bottom:.6rem">Fees &amp; payment</h3><p style="font-size:.88rem;color:var(--mid);line-height:1.85">Fees are in pounds sterling (GBP) and paid securely by card at the time of booking. Your bank converts to your local currency at its own rate — there is nothing extra to arrange.</p></div>
+        <div style="background:var(--white);padding:1.8rem"><h3 style="font-family:var(--serif);font-size:1.15rem;margin-bottom:.6rem">A few countries I can't work in</h3><p style="font-size:.88rem;color:var(--mid);line-height:1.85">Because of professional and insurance requirements there is a small number of countries where I am unable to offer therapy or supervision. I check this when I receive your enquiry or booking, and if it applies to you I will let you know straight away and refund any payment in full.</p></div>
+        <div style="background:var(--white);padding:1.8rem"><h3 style="font-family:var(--serif);font-size:1.15rem;margin-bottom:.6rem">Not sure? Just ask</h3><p style="font-size:.88rem;color:var(--mid);line-height:1.85">If you would like to check before booking, <a href="contact.html" style="color:var(--sage)">send me a message</a> with the country you live in and I will confirm within two working days.</p></div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer><div class="w">
