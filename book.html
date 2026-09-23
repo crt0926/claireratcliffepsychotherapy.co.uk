@@ -203,6 +203,15 @@ input:invalid{border-color:#e0a0a0}
 .bk-select-wrap{padding:3rem 0 0}
 .bk-select-wrap label{display:block;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
 .bk-type{width:100%;padding:.9rem 1rem;background:var(--white);border:2px solid var(--sage);color:var(--charcoal);font-family:var(--sans);font-size:1rem;font-weight:400;outline:none;-webkit-appearance:none;border-radius:0;cursor:pointer}
+.bk-mode{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:1.6rem}
+.bk-mode button{background:var(--white);border:0;padding:1.1rem 1.2rem;text-align:left;cursor:pointer;font-family:var(--sans);color:var(--charcoal)}
+.bk-mode button strong{display:block;font-size:.95rem;font-weight:500;margin-bottom:.2rem}
+.bk-mode button span{font-size:.8rem;color:var(--mid);line-height:1.5}
+.bk-mode button.on{background:var(--charcoal);color:var(--white)}
+.bk-mode button.on span{color:rgba(255,255,255,.7)}
+.bk-mode button:focus-visible{outline:2px solid var(--sage);outline-offset:-2px}
+.bk-mode-note{font-size:.82rem;color:var(--mid);margin:0 0 1rem;padding:.7rem 1rem;background:var(--light);border-left:3px solid var(--sage)}
+@media(max-width:600px){.bk-mode{grid-template-columns:1fr}}
 .bk-panel{display:none;padding:2.5rem 0}
 .bk-panel.active{display:block}
 .bk-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
@@ -440,6 +449,11 @@ nav{top:4px}
   <div class="w">
     <div class="bk-wrap">
       <div class="bk-select-wrap" style="padding-bottom:2rem">
+        <label>Have you worked with Claire before?</label>
+        <div class="bk-mode" role="group" aria-label="First session or follow-up">
+          <button type="button" id="bkm-first" class="on" onclick="setBookMode('first')"><strong>No — this is my first session</strong><span>A short intake form is included when you book, so Claire has what she needs before you meet.</span></button>
+          <button type="button" id="bkm-follow" onclick="setBookMode('follow')"><strong>Yes — I'm booking a follow-up</strong><span>For existing clients and supervisees. No intake form — straight to the calendar.</span></button>
+        </div>
         <label for="sessionType">What type of session would you like to book?</label>
         <select class="bk-type" id="sessionType" onchange="showBookPanel(this.value)">
           <option value="">— Select a session type —</option>
@@ -482,7 +496,8 @@ nav{top:4px}
           <li>Sessions are not recorded.</li>
         </ul></div>
         <p style="font-size:.78rem;color:var(--muted);margin:0 0 .6rem">Times in the calendar are shown in your local time zone. Fees are in pounds sterling (GBP).</p>
-        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&owner=39493793&appointmentType=94020606" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
+        <p class="bk-mode-note" data-note></p>
+        <iframe data-first="94020606" data-follow="98622300" src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94020606" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
       </div>
 
       <!-- ── INDIVIDUAL THERAPY EVENING/WEEKEND ── -->
@@ -504,7 +519,8 @@ nav{top:4px}
           <li>Sessions are not recorded.</li>
         </ul></div>
         <p style="font-size:.78rem;color:var(--muted);margin:0 0 .6rem">Times in the calendar are shown in your local time zone. Fees are in pounds sterling (GBP).</p>
-        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&owner=39493793&appointmentType=94020923" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
+        <p class="bk-mode-note" data-note></p>
+        <iframe data-first="94020923" data-follow="98622357" src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94020923" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
       </div>
 
       <!-- ── COUPLES 60MIN DAYTIME ── -->
@@ -525,7 +541,8 @@ nav{top:4px}
           <li>Sessions are not recorded.</li>
         </ul></div>
         <p style="font-size:.78rem;color:var(--muted);margin:0 0 .6rem">Times in the calendar are shown in your local time zone. Fees are in pounds sterling (GBP).</p>
-        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&owner=39493793&appointmentType=94020951" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
+        <p class="bk-mode-note" data-note></p>
+        <iframe data-first="94020951" data-follow="98622374" src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94020951" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
       </div>
 
       <!-- ── COUPLES 90MIN DAYTIME ── -->
@@ -546,7 +563,8 @@ nav{top:4px}
           <li>Sessions are not recorded.</li>
         </ul></div>
         <p style="font-size:.78rem;color:var(--muted);margin:0 0 .6rem">Times in the calendar are shown in your local time zone. Fees are in pounds sterling (GBP).</p>
-        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&owner=39493793&appointmentType=94020989" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
+        <p class="bk-mode-note" data-note></p>
+        <iframe data-first="94020989" data-follow="98622418" src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94020989" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
       </div>
 
       <!-- ── COUPLES 60MIN EVENING/WEEKEND ── -->
@@ -570,7 +588,8 @@ nav{top:4px}
              Replace the URL below with the correct appointmentType ID from Acuity
              once the evening/weekend couples 60min appointment has been created. -->
         <p style="font-size:.78rem;color:var(--muted);margin:0 0 .6rem">Times in the calendar are shown in your local time zone. Fees are in pounds sterling (GBP).</p>
-        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&owner=39493793&appointmentType=94021949" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
+        <p class="bk-mode-note" data-note></p>
+        <iframe data-first="94021949" data-follow="98622430" src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94021949" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
       </div>
 
       <!-- ── COUPLES 90MIN EVENING/WEEKEND ── -->
@@ -591,7 +610,8 @@ nav{top:4px}
           <li>Sessions are not recorded.</li>
         </ul></div>
         <p style="font-size:.78rem;color:var(--muted);margin:0 0 .6rem">Times in the calendar are shown in your local time zone. Fees are in pounds sterling (GBP).</p>
-        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&owner=39493793&appointmentType=94021012" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
+        <p class="bk-mode-note" data-note></p>
+        <iframe data-first="94021012" data-follow="98622453" src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94021012" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
       </div>
 
       <!-- ── INDIVIDUAL SUPERVISION ── -->
@@ -613,7 +633,8 @@ nav{top:4px}
           <li>Sessions are not recorded.</li>
         </ul></div>
         <p style="font-size:.78rem;color:var(--muted);margin:0 0 .6rem">Times in the calendar are shown in your local time zone. Fees are in pounds sterling (GBP).</p>
-        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&owner=39493793&appointmentType=94021030" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
+        <p class="bk-mode-note" data-note></p>
+        <iframe data-first="94021030" data-follow="98622472" src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=94021030" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
       </div>
 
       <div class="bk-panel" id="bk-sup-90">
@@ -634,7 +655,8 @@ nav{top:4px}
           <li>Sessions are not recorded.</li>
         </ul></div>
         <p style="font-size:.78rem;color:var(--muted);margin:0 0 .6rem">Times in the calendar are shown in your local time zone. Fees are in pounds sterling (GBP).</p>
-        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=39493793&owner=39493793&appointmentType=96720620" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
+        <p class="bk-mode-note" data-note></p>
+        <iframe data-first="96720620" data-follow="98622493" src="https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType=96720620" width="100%" height="800" frameBorder="0" allow="payment" style="border:1px solid var(--border)"></iframe>
       </div>
 
             <!-- ── COUPLES INTENSIVE ENQUIRY ── -->
@@ -791,6 +813,23 @@ function cm(){
   if(mm) mm.classList.toggle('open');
 }
 
+// Book page: first session vs follow-up
+let bookMode='first';
+function setBookMode(mode){
+  bookMode=(mode==='follow')?'follow':'first';
+  document.getElementById('bkm-first').classList.toggle('on',bookMode==='first');
+  document.getElementById('bkm-follow').classList.toggle('on',bookMode==='follow');
+  document.querySelectorAll('.bk-panel iframe[data-first]').forEach(fr=>{
+    const id=fr.dataset[bookMode];
+    const src='https://app.acuityscheduling.com/schedule.php?owner=39493793&appointmentType='+id;
+    if(fr.getAttribute('src')!==src) fr.setAttribute('src',src);
+  });
+  document.querySelectorAll('.bk-mode-note').forEach(n=>{
+    n.textContent = bookMode==='follow'
+      ? 'Follow-up session — for existing clients and supervisees. No intake form; choose a time and pay to confirm. If this is your first session with Claire, switch to "first session" above.'
+      : 'First session — a short intake form is included so Claire has what she needs before you meet. Already a client? Switch to "follow-up" above.';
+  });
+}
 // Book page session selector
 function showBookPanel(val){
   document.querySelectorAll('.bk-panel').forEach(p=>{p.style.display='none';});
@@ -812,9 +851,11 @@ function applyHash(){
   const TT={'healing-relationships':'membership'};
   if(document.getElementById('tht-'+h)) switchTherapyTab(h);
   else if(document.getElementById('ttht-'+(TT[h]||h))) switchTherapistsTab(TT[h]||h);
+  else if(h.endsWith('-f') && document.getElementById('bk-'+h.slice(0,-2))){ setBookMode('follow'); sbt(h.slice(0,-2)); }
   else if(document.getElementById('bk-'+h)) sbt(h);
 }
 document.addEventListener('DOMContentLoaded',()=>{
+  if(typeof setBookMode==='function' && document.getElementById('bkm-first')) setBookMode('first');
   applyHash();
   // highlight current page in nav
   const here=location.pathname.split('/').pop()||'index.html';
