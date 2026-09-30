@@ -128,7 +128,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2}
 .pr p{color:var(--mid);margin-bottom:.9rem;font-size:.9rem;line-height:1.88}
 .pr ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:.7rem 0}
 .pr ul li{display:flex;align-items:flex-start;gap:.65rem;font-size:.87rem;color:var(--mid)}
-.pr ul li::before{content:'—';color:var(--border);flex-shrink:0;margin-top:.1rem}
+.pr ul li::before{content:'·';color:var(--border);flex-shrink:0;margin-top:.1rem}
 
 /* PRICE CARD */
 .pc{background:var(--off);padding:2rem;border-top:3px solid var(--sage)}
@@ -162,7 +162,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2}
 .ds .lbl{color:var(--sage-lt)}
 .ds ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
 .ds ul li{font-size:.87rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.65rem}
-.ds ul li::before{content:'—';color:rgba(255,255,255,.25);flex-shrink:0}
+.ds ul li::before{content:'·';color:rgba(255,255,255,.25);flex-shrink:0}
 .ss{background:var(--sage);padding:4.5rem 0}
 .ss h2{color:var(--white)}
 .ss p{color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.88;margin-bottom:.9rem}
@@ -198,7 +198,7 @@ input:invalid{border-color:#e0a0a0}
 .cr input[type=checkbox]{width:14px;height:14px;flex-shrink:0;margin-top:.22rem;accent-color:var(--sage)}
 .cr label{font-size:.83rem;color:var(--mid)}
 
-/* BOOKING — simplified */
+/* BOOKING, simplified */
 .bk-wrap{max-width:860px;margin:0 auto}
 .bk-select-wrap{padding:3rem 0 0}
 .bk-select-wrap label{display:block;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
@@ -445,18 +445,18 @@ nav{top:4px}
   <div class="ih-compact"><div class="w"><div class="ih-c">
     <span class="lbl">Transparent pricing</span>
     <h1 style="font-size:clamp(2.1rem,3.5vw,3.4rem);margin:.35rem 0 1.1rem;font-family:var(--serif);font-weight:300;line-height:1.12">Fees &amp;<br><em style="font-style:italic;color:var(--sage)">How to Book</em></h1>
-    <p style="font-size:.97rem;color:var(--mid);margin-bottom:1.7rem;line-height:1.88;max-width:560px">A complete summary of all session fees and packages — with direct links through to booking. For common questions, see the <a href="faq.html" style="color:var(--sage);cursor:pointer;text-decoration:underline">FAQs</a>.</p>
+    <p style="font-size:.97rem;color:var(--mid);margin-bottom:1.7rem;line-height:1.88;max-width:560px">A complete summary of all session fees and packages, with direct links through to booking. For common questions, see the <a href="faq.html" style="color:var(--sage);cursor:pointer;text-decoration:underline">FAQs</a>.</p>
   </div></div></div>
   <div class="w" style="padding-bottom:2rem">
-    <div style="background:var(--light);border-left:3px solid var(--sage);padding:1rem 1.4rem;font-size:.85rem;color:var(--mid);line-height:1.8;margin-bottom:2rem"><strong style="color:var(--charcoal)">Outside the UK?</strong> All fees are in pounds sterling (GBP). Your card is charged in GBP and your bank converts at its own rate. Sessions are available worldwide, apart from a small number of countries — Claire confirms this when she receives your enquiry or booking. Booking calendars show times in your local time zone.</div>
+    <div style="background:var(--light);border-left:3px solid var(--sage);padding:1rem 1.4rem;font-size:.85rem;color:var(--mid);line-height:1.8;margin-bottom:2rem"><strong style="color:var(--charcoal)">Outside the UK?</strong> All fees are in pounds sterling (GBP). Your card is charged in GBP and your bank converts at its own rate. Sessions are available worldwide, apart from a small number of countries. Claire confirms this when she receives your enquiry or booking. Booking calendars show times in your local time zone.</div>
     <div class="fg2">
-      <div class="fc"><h3>Individual Therapy</h3><table><tr><td>50 min — weekday before 5pm</td><td>£120</td></tr><tr><td>50 min — evening or weekend</td><td>£135</td></tr></table><br><a class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" href="book.html#ind-day">Book individual session →</a><a href="book.html#ind-day-f" style="display:block;text-align:center;margin-top:.6rem;font-size:.8rem;color:var(--mid);text-decoration:underline;text-underline-offset:3px">Already a client? Book a follow-up →</a></div>
-      <div class="fc"><h3>Couples &amp; Relationship Therapy</h3><table><tr><td>60 min — daytime</td><td>£165</td></tr><tr><td>90 min — daytime</td><td>£240</td></tr><tr><td>60 min — eve/weekend</td><td>£185</td></tr><tr><td>90 min — eve/weekend</td><td>£270</td></tr></table><br><a class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" href="book.html#cpl-60d">Book couples session →</a><a href="book.html#cpl-60d-f" style="display:block;text-align:center;margin-top:.6rem;font-size:.8rem;color:var(--mid);text-decoration:underline;text-underline-offset:3px">Already a client? Book a follow-up →</a></div>
+      <div class="fc"><h3>Individual Therapy</h3><table><tr><td>50 min, weekday before 5pm</td><td>£120</td></tr><tr><td>50 min, evening or weekend</td><td>£135</td></tr></table><br><a class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" href="book.html#ind-day">Book individual session →</a><a href="book.html#ind-day-f" style="display:block;text-align:center;margin-top:.6rem;font-size:.8rem;color:var(--mid);text-decoration:underline;text-underline-offset:3px">Already a client? Book a follow-up →</a></div>
+      <div class="fc"><h3>Couples &amp; Relationship Therapy</h3><table><tr><td>60 min, daytime</td><td>£165</td></tr><tr><td>90 min, daytime</td><td>£240</td></tr><tr><td>60 min, eve/weekend</td><td>£185</td></tr><tr><td>90 min, eve/weekend</td><td>£270</td></tr></table><br><a class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" href="book.html#cpl-60d">Book couples session →</a><a href="book.html#cpl-60d-f" style="display:block;text-align:center;margin-top:.6rem;font-size:.8rem;color:var(--mid);text-decoration:underline;text-underline-offset:3px">Already a client? Book a follow-up →</a></div>
       <div class="fc"><h3>Couples Therapy Intensive</h3><table><tr><td>3 hours</td><td>£540</td></tr><tr><td>1 day</td><td>£910</td></tr><tr><td>2 days</td><td>£1,850</td></tr><tr><td>3 days (inc. follow-up)</td><td>£2,850</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">Bookings by enquiry only.</p><br><span class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" onclick="sbt('intensive')">Enquire about an intensive →</span></div>
-      <div class="fc"><h3>Clinical Supervision</h3><table><tr><td>Individual — 60 min</td><td>£100</td></tr><tr><td>Individual — 90 min</td><td>£150</td></tr><tr><td>Small Group — Supervision (6-month block)</td><td>£480</td></tr></table><br><a class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" href="for-therapists.html#supervision">Supervision options →</a></div>
-      <div class="fc"><h3>Small Group — Therapy</h3><table><tr><td>12-week programme</td><td>£550</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">Minimum 8 · Maximum 30 · 9 sessions · By enquiry.</p><br><a class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" href="small-group-therapy.html">Register interest →</a></div>
-      <div class="fc sg"><h3>Healing Relationships</h3><table><tr><td>Online community for therapists</td><td>Coming early 2027</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">Currently being built. Pricing and details will be confirmed closer to launch — join the mailing list to hear first.</p><br><a class="btn bsg" style="font-size:.68rem;width:100%;text-align:center;display:block" href="for-therapists.html#healing-relationships">Find out more →</a></div>
-      <div class="fc sg"><h3>Small Group — Supervision</h3><table><tr><td>6-month block — one-off payment</td><td>£480</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">6-month commitment · single upfront payment.</p><br><a class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" href="small-group-supervision.html">Find out more →</a></div>
+      <div class="fc"><h3>Clinical Supervision</h3><table><tr><td>Individual, 60 min</td><td>£100</td></tr><tr><td>Individual, 90 min</td><td>£150</td></tr><tr><td>Small Group Supervision (6-month block)</td><td>£480</td></tr></table><br><a class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" href="for-therapists.html#supervision">Supervision options →</a></div>
+      <div class="fc"><h3>Small Group Therapy</h3><table><tr><td>12-week programme</td><td>£550</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">Minimum 8 · Maximum 30 · 9 sessions · By enquiry.</p><br><a class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" href="small-group-therapy.html">Register interest →</a></div>
+      <div class="fc sg"><h3>Healing Relationships</h3><table><tr><td>Online community for therapists</td><td>Coming early 2027</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">Currently being built. Pricing and details will be confirmed closer to launch. Join the mailing list to hear first.</p><br><a class="btn bsg" style="font-size:.68rem;width:100%;text-align:center;display:block" href="for-therapists.html#healing-relationships">Find out more →</a></div>
+      <div class="fc sg"><h3>Small Group Supervision</h3><table><tr><td>6-month block, one-off payment</td><td>£480</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">6-month commitment · single upfront payment.</p><br><a class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" href="small-group-supervision.html">Find out more →</a></div>
     </div>
     <div class="fb"><strong>Couples intensives:</strong> Full payment is taken when your intensive is confirmed. 25% of the fee is a non-refundable deposit. Cancel with more than 48 hours' notice and the remaining 75% is refunded; cancel with less than 48 hours' notice, or do not attend, and the full fee is charged. For multi-day packages the 48 hours runs from the start of the first day.</div>
     <div class="fb"><strong>Cancellation:</strong> 48 hours' notice required for individual, couples and supervision sessions. Cancellations with more than 48 hours' notice are refunded less a £5 administration fee (this covers card-processing costs that are not returned when a payment is refunded); rescheduling with more than 48 hours' notice is free. Late cancellations and non-attendance charged at the full session rate. Group sessions cannot be cancelled or rescheduled by participants. <strong>Payment</strong> is required at the time of booking for all individual and couples sessions. Receipts are issued automatically.</div>
@@ -479,7 +479,7 @@ nav{top:4px}
         </ul></div>
         <div class="fc2"><h4>For Therapists</h4><ul>
           <li><a href="for-therapists.html#supervision">Individual Supervision</a></li>
-          <li><a href="for-therapists.html#group">Small Group — Supervision</a></li>
+          <li><a href="for-therapists.html#group">Small Group Supervision</a></li>
           <li><a href="for-therapists.html#healing-relationships">Healing Relationships</a></li>
         </ul></div>
         <div class="fc2"><h4>Information</h4><ul>
@@ -560,13 +560,13 @@ async function sendFormspree(e, subject, okMsg){
   try{
     const res=await fetch('https://formspree.io/f/xrpglpyp',{method:'POST',body:JSON.stringify(fields),headers:{'Accept':'application/json','Content-Type':'application/json'}});
     if(res.ok){ sf(okMsg); form.reset(); }
-    else sf('Something went wrong — please email claireratcliffetherapy@gmail.com directly.');
-  }catch(err){ sf('Something went wrong — please email claireratcliffetherapy@gmail.com directly.'); }
+    else sf('Something went wrong. Please email claireratcliffetherapy@gmail.com directly.');
+  }catch(err){ sf('Something went wrong. Please email claireratcliffetherapy@gmail.com directly.'); }
   btn.textContent=original; btn.disabled=false;
 }
-function sendContactForm(e){ sendFormspree(e,'Website Enquiry — Claire Ratcliffe Psychotherapy','Thank you — your message has been received. Claire will be in touch within 2 working days.'); }
-function submitIntensiveEnquiry(e){ sendFormspree(e,'Couples Intensive Enquiry — Claire Ratcliffe Psychotherapy','Your enquiry has been received. Claire will be in touch within 2 working days.'); }
-function submitSupervisionEnquiry(e){ sendFormspree(e,'Small Group Supervision Enquiry — Claire Ratcliffe Psychotherapy','Thank you — your enquiry has been received. Claire will be in touch within 2 working days.'); }
+function sendContactForm(e){ sendFormspree(e,'Website Enquiry | Claire Ratcliffe Psychotherapy','Thank you, your message has been received. Claire will be in touch within 2 working days.'); }
+function submitIntensiveEnquiry(e){ sendFormspree(e,'Couples Intensive Enquiry | Claire Ratcliffe Psychotherapy','Your enquiry has been received. Claire will be in touch within 2 working days.'); }
+function submitSupervisionEnquiry(e){ sendFormspree(e,'Small Group Supervision Enquiry | Claire Ratcliffe Psychotherapy','Thank you, your enquiry has been received. Claire will be in touch within 2 working days.'); }
 
 // Nav scroll effect
 window.addEventListener('scroll',()=>{

@@ -128,7 +128,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2}
 .pr p{color:var(--mid);margin-bottom:.9rem;font-size:.9rem;line-height:1.88}
 .pr ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:.7rem 0}
 .pr ul li{display:flex;align-items:flex-start;gap:.65rem;font-size:.87rem;color:var(--mid)}
-.pr ul li::before{content:'—';color:var(--border);flex-shrink:0;margin-top:.1rem}
+.pr ul li::before{content:'·';color:var(--border);flex-shrink:0;margin-top:.1rem}
 
 /* PRICE CARD */
 .pc{background:var(--off);padding:2rem;border-top:3px solid var(--sage)}
@@ -162,7 +162,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2}
 .ds .lbl{color:var(--sage-lt)}
 .ds ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
 .ds ul li{font-size:.87rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.65rem}
-.ds ul li::before{content:'—';color:rgba(255,255,255,.25);flex-shrink:0}
+.ds ul li::before{content:'·';color:rgba(255,255,255,.25);flex-shrink:0}
 .ss{background:var(--sage);padding:4.5rem 0}
 .ss h2{color:var(--white)}
 .ss p{color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.88;margin-bottom:.9rem}
@@ -198,7 +198,7 @@ input:invalid{border-color:#e0a0a0}
 .cr input[type=checkbox]{width:14px;height:14px;flex-shrink:0;margin-top:.22rem;accent-color:var(--sage)}
 .cr label{font-size:.83rem;color:var(--mid)}
 
-/* BOOKING — simplified */
+/* BOOKING, simplified */
 .bk-wrap{max-width:860px;margin:0 auto}
 .bk-select-wrap{padding:3rem 0 0}
 .bk-select-wrap label{display:block;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
@@ -443,12 +443,12 @@ nav{top:4px}
 <!-- HOME -->
 <main class="page active" id="page-book">
   <div class="ih"><div class="w"><div class="ih-c">
-    <span class="lbl">New clients — released availability</span>
+    <span class="lbl">New clients: released availability</span>
     <h1>Book a<br><em>Session</em></h1>
-    <p>Select the type of session you would like to book below. The booking calendar will appear automatically — choose your preferred date and time and complete payment to confirm. Existing regular clients should continue to use the current booking process.</p>
+    <p>Select the type of session you would like to book below. The booking calendar will appear automatically. Choose your preferred date and time and complete payment to confirm. Existing regular clients should continue to use the current booking process.</p>
   </div></div></div>
 
-  <!-- Acuity embed script — loaded once for all embeds -->
+  <!-- Acuity embed script, loaded once for all embeds -->
   <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
 
   <div class="w">
@@ -456,28 +456,28 @@ nav{top:4px}
       <div class="bk-select-wrap" style="padding-bottom:2rem">
         <label>Have you worked with Claire before?</label>
         <div class="bk-mode" role="group" aria-label="First session or follow-up">
-          <button type="button" id="bkm-first" class="on" onclick="setBookMode('first')"><strong>No — this is my first session</strong><span>A short intake form is included when you book, so Claire has what she needs before you meet.</span></button>
-          <button type="button" id="bkm-follow" onclick="setBookMode('follow')"><strong>Yes — I'm booking a follow-up</strong><span>For existing clients and supervisees. No intake form — straight to the calendar.</span></button>
+          <button type="button" id="bkm-first" class="on" onclick="setBookMode('first')"><strong>No, this is my first session</strong><span>A short intake form is included when you book, so Claire has what she needs before you meet.</span></button>
+          <button type="button" id="bkm-follow" onclick="setBookMode('follow')"><strong>Yes, I'm booking a follow-up</strong><span>For existing clients and supervisees. No intake form, straight to the calendar.</span></button>
         </div>
         <label for="sessionType">What type of session would you like to book?</label>
         <select class="bk-type" id="sessionType" onchange="showBookPanel(this.value)">
-          <option value="">— Select a session type —</option>
+          <option value="">Select a session type</option>
           <optgroup label="Individual Therapy">
-            <option value="ind-day">Individual therapy — weekday daytime (50 min · £120)</option>
-            <option value="ind-eve">Individual therapy — evening or weekend (50 min · £135)</option>
+            <option value="ind-day">Individual therapy, weekday daytime (50 min · £120)</option>
+            <option value="ind-eve">Individual therapy, evening or weekend (50 min · £135)</option>
           </optgroup>
           <optgroup label="Couples Therapy">
-            <option value="cpl-60d">Couples therapy — 60 min weekday daytime (£165)</option>
-            <option value="cpl-90d">Couples therapy — 90 min weekday daytime (£240)</option>
-            <option value="cpl-60e">Couples therapy — 60 min evening or weekend (£185)</option>
-            <option value="cpl-90e">Couples therapy — 90 min evening or weekend (£270)</option>
+            <option value="cpl-60d">Couples therapy, 60 min weekday daytime (£165)</option>
+            <option value="cpl-90d">Couples therapy, 90 min weekday daytime (£240)</option>
+            <option value="cpl-60e">Couples therapy, 60 min evening or weekend (£185)</option>
+            <option value="cpl-90e">Couples therapy, 90 min evening or weekend (£270)</option>
           </optgroup>
           <optgroup label="Individual Supervision">
-            <option value="sup-day">Individual supervision — 60 min (£100)</option>
-            <option value="sup-90">Individual supervision — 90 min (£150)</option>
+            <option value="sup-day">Individual supervision, 60 min (£100)</option>
+            <option value="sup-90">Individual supervision, 90 min (£150)</option>
           </optgroup>
           <optgroup label="Enquiry Only">
-            <option value="intensive">Couples intensive — enquiry (from £540)</option>
+            <option value="intensive">Couples intensive, enquiry (from £540)</option>
           </optgroup>
         </select>
       </div>
@@ -496,7 +496,7 @@ nav{top:4px}
         <div class="tb" style="margin-bottom:1.5rem"><h4>Before you book</h4><ul>
           <li>Payment is taken at the time of booking via Stripe.</li>
           <li>48 hours' notice required to cancel or reschedule. Cancellations with more than 48 hours' notice are refunded less a £5 admin fee; late cancellations and non-attendance charged in full.</li>
-          <li>Sessions are held via Zoom — a unique link is sent with your confirmation.</li>
+          <li>Sessions are held via Zoom. A unique link is sent with your confirmation.</li>
           <li>You must attend from a private space with no one else present.</li>
           <li>Sessions are not recorded.</li>
         </ul></div>
@@ -519,7 +519,7 @@ nav{top:4px}
         <div class="tb" style="margin-bottom:1.5rem"><h4>Before you book</h4><ul>
           <li>Payment is taken at the time of booking via Stripe.</li>
           <li>48 hours' notice required to cancel or reschedule. Cancellations with more than 48 hours' notice are refunded less a £5 admin fee; late cancellations and non-attendance charged in full.</li>
-          <li>Sessions are held via Zoom — a unique link is sent with your confirmation.</li>
+          <li>Sessions are held via Zoom. A unique link is sent with your confirmation.</li>
           <li>You must attend from a private space with no one else present.</li>
           <li>Sessions are not recorded.</li>
         </ul></div>
@@ -633,7 +633,7 @@ nav{top:4px}
         <div class="tb" style="margin-bottom:1.5rem"><h4>Before you book</h4><ul>
           <li>Payment is taken at the time of booking via Stripe.</li>
           <li>48 hours' notice required to cancel or reschedule. Cancellations with more than 48 hours' notice are refunded less a £5 admin fee; late cancellations and non-attendance charged in full.</li>
-          <li>Sessions are held via Zoom — a unique link is sent with your confirmation.</li>
+          <li>Sessions are held via Zoom. A unique link is sent with your confirmation.</li>
           <li>You must attend from a private space with no one else present.</li>
           <li>Sessions are not recorded.</li>
         </ul></div>
@@ -655,7 +655,7 @@ nav{top:4px}
         <div class="tb" style="margin-bottom:1.5rem"><h4>Before you book</h4><ul>
           <li>Payment is taken at the time of booking via Stripe.</li>
           <li>48 hours' notice required to cancel or reschedule. Cancellations with more than 48 hours' notice are refunded less a £5 admin fee; late cancellations and non-attendance charged in full.</li>
-          <li>Sessions are held via Zoom — a unique link is sent with your confirmation.</li>
+          <li>Sessions are held via Zoom. A unique link is sent with your confirmation.</li>
           <li>You must attend from a private space with no one else present.</li>
           <li>Sessions are not recorded.</li>
         </ul></div>
@@ -673,7 +673,7 @@ nav{top:4px}
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
           <div>
-            <p style="font-size:.92rem;color:var(--mid);line-height:1.88;margin-bottom:1.2rem">Intensive sessions are arranged directly — get in touch to discuss your needs, availability and which package is right for you. I will respond within 2 working days.</p>
+            <p style="font-size:.92rem;color:var(--mid);line-height:1.88;margin-bottom:1.2rem">Intensive sessions are arranged directly. Get in touch to discuss your needs, availability and which package is right for you. I will respond within 2 working days.</p>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:0;margin-bottom:1.5rem">
               <li style="display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--mid)"><span>3 hours</span><span style="font-family:var(--serif);font-size:1.2rem;color:var(--charcoal)">£540</span></li>
               <li style="display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--mid)"><span>1 day</span><span style="font-family:var(--serif);font-size:1.2rem;color:var(--charcoal)">£910</span></li>
@@ -695,7 +695,7 @@ nav{top:4px}
             <div class="fr"><div class="fg"><label for="ci-pname">Partner's first name</label><input type="text" id="ci-pname" name="partner_first_name"/></div><div class="fg"><label for="ci-plname">Partner's last name</label><input type="text" id="ci-plname" name="partner_last_name"/></div></div>
             <div class="fg"><label for="ci-email">Email *</label><input type="email" required id="ci-email" name="email"/></div>
             <div class="fg"><label for="ci-phone">Phone</label><input type="tel" id="ci-phone" name="phone"/></div>
-            <div class="fg"><label for="ci-package">Package of interest</label><select id="ci-package" name="package_of_interest"><option value="">Please select</option><option>3 hours — £540</option><option>1 day — £910</option><option>2 days — £1,850</option><option>3 days (inc. follow-up) — £2,850</option><option>Not sure yet</option></select></div>
+            <div class="fg"><label for="ci-package">Package of interest</label><select id="ci-package" name="package_of_interest"><option value="">Please select</option><option>3 hours (£540)</option><option>1 day (£910)</option><option>2 days (£1,850)</option><option>3 days (inc. follow-up) (£2,850)</option><option>Not sure yet</option></select></div>
             <div class="fg"><label for="ci-message">What brings you to therapy? (optional)</label><textarea id="ci-message" name="message"></textarea></div>
             <div class="cr"><input type="checkbox" id="in1" name="marketing_consent"><label for="in1">I would like to receive marketing updates from Claire Ratcliffe Psychotherapy.</label></div>
             <p class="fn">Data processed in accordance with GDPR and our <a href="privacy-policy.html" style="color:var(--sage)">privacy policy</a>.</p>
@@ -724,7 +724,7 @@ nav{top:4px}
         </ul></div>
         <div class="fc2"><h4>For Therapists</h4><ul>
           <li><a href="for-therapists.html#supervision">Individual Supervision</a></li>
-          <li><a href="for-therapists.html#group">Small Group — Supervision</a></li>
+          <li><a href="for-therapists.html#group">Small Group Supervision</a></li>
           <li><a href="for-therapists.html#healing-relationships">Healing Relationships</a></li>
         </ul></div>
         <div class="fc2"><h4>Information</h4><ul>
@@ -805,13 +805,13 @@ async function sendFormspree(e, subject, okMsg){
   try{
     const res=await fetch('https://formspree.io/f/xrpglpyp',{method:'POST',body:JSON.stringify(fields),headers:{'Accept':'application/json','Content-Type':'application/json'}});
     if(res.ok){ sf(okMsg); form.reset(); }
-    else sf('Something went wrong — please email claireratcliffetherapy@gmail.com directly.');
-  }catch(err){ sf('Something went wrong — please email claireratcliffetherapy@gmail.com directly.'); }
+    else sf('Something went wrong. Please email claireratcliffetherapy@gmail.com directly.');
+  }catch(err){ sf('Something went wrong. Please email claireratcliffetherapy@gmail.com directly.'); }
   btn.textContent=original; btn.disabled=false;
 }
-function sendContactForm(e){ sendFormspree(e,'Website Enquiry — Claire Ratcliffe Psychotherapy','Thank you — your message has been received. Claire will be in touch within 2 working days.'); }
-function submitIntensiveEnquiry(e){ sendFormspree(e,'Couples Intensive Enquiry — Claire Ratcliffe Psychotherapy','Your enquiry has been received. Claire will be in touch within 2 working days.'); }
-function submitSupervisionEnquiry(e){ sendFormspree(e,'Small Group Supervision Enquiry — Claire Ratcliffe Psychotherapy','Thank you — your enquiry has been received. Claire will be in touch within 2 working days.'); }
+function sendContactForm(e){ sendFormspree(e,'Website Enquiry | Claire Ratcliffe Psychotherapy','Thank you, your message has been received. Claire will be in touch within 2 working days.'); }
+function submitIntensiveEnquiry(e){ sendFormspree(e,'Couples Intensive Enquiry | Claire Ratcliffe Psychotherapy','Your enquiry has been received. Claire will be in touch within 2 working days.'); }
+function submitSupervisionEnquiry(e){ sendFormspree(e,'Small Group Supervision Enquiry | Claire Ratcliffe Psychotherapy','Thank you, your enquiry has been received. Claire will be in touch within 2 working days.'); }
 
 // Nav scroll effect
 window.addEventListener('scroll',()=>{
@@ -838,8 +838,8 @@ function setBookMode(mode){
   });
   document.querySelectorAll('.bk-mode-note').forEach(n=>{
     n.textContent = bookMode==='follow'
-      ? 'Follow-up session — for existing clients and supervisees. No intake form; choose a time and pay to confirm. If this is your first session with Claire, switch to "first session" above.'
-      : 'First session — a short intake form is included so Claire has what she needs before you meet. Already a client? Switch to "follow-up" above.';
+      ? 'Follow-up session: for existing clients and supervisees. No intake form; choose a time and pay to confirm. If this is your first session with Claire, switch to "first session" above.'
+      : 'First session: a short intake form is included so Claire has what she needs before you meet. Already a client? Switch to "follow-up" above.';
   });
 }
 // Book page session selector

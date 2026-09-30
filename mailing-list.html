@@ -128,7 +128,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2}
 .pr p{color:var(--mid);margin-bottom:.9rem;font-size:.9rem;line-height:1.88}
 .pr ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:.7rem 0}
 .pr ul li{display:flex;align-items:flex-start;gap:.65rem;font-size:.87rem;color:var(--mid)}
-.pr ul li::before{content:'—';color:var(--border);flex-shrink:0;margin-top:.1rem}
+.pr ul li::before{content:'·';color:var(--border);flex-shrink:0;margin-top:.1rem}
 
 /* PRICE CARD */
 .pc{background:var(--off);padding:2rem;border-top:3px solid var(--sage)}
@@ -162,7 +162,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2}
 .ds .lbl{color:var(--sage-lt)}
 .ds ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
 .ds ul li{font-size:.87rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.65rem}
-.ds ul li::before{content:'—';color:rgba(255,255,255,.25);flex-shrink:0}
+.ds ul li::before{content:'·';color:rgba(255,255,255,.25);flex-shrink:0}
 .ss{background:var(--sage);padding:4.5rem 0}
 .ss h2{color:var(--white)}
 .ss p{color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.88;margin-bottom:.9rem}
@@ -198,7 +198,7 @@ input:invalid{border-color:#e0a0a0}
 .cr input[type=checkbox]{width:14px;height:14px;flex-shrink:0;margin-top:.22rem;accent-color:var(--sage)}
 .cr label{font-size:.83rem;color:var(--mid)}
 
-/* BOOKING — simplified */
+/* BOOKING, simplified */
 .bk-wrap{max-width:860px;margin:0 auto}
 .bk-select-wrap{padding:3rem 0 0}
 .bk-select-wrap label{display:block;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
@@ -459,7 +459,7 @@ nav{top:4px}
             <option>Other</option>
           </select>
         </div>
-        <div class="cbg"><div class="ci"><input type="checkbox" id="ml1" required><label for="ml1">I would like to receive marketing emails from Claire Ratcliffe Psychotherapy — including news, events, new content and group openings. I understand I can unsubscribe at any time.</label></div></div>
+        <div class="cbg"><div class="ci"><input type="checkbox" id="ml1" required><label for="ml1">I would like to receive marketing emails from Claire Ratcliffe Psychotherapy, including news, events, new content and group openings. I understand I can unsubscribe at any time.</label></div></div>
         <p class="fn">We will never share your data with third parties. See our <a href="privacy-policy.html" style="color:var(--sage);cursor:pointer">privacy policy</a>.</p>
         <br><button type="submit" class="btn bdk">Subscribe →</button>
       </form>
@@ -482,7 +482,7 @@ nav{top:4px}
         </ul></div>
         <div class="fc2"><h4>For Therapists</h4><ul>
           <li><a href="for-therapists.html#supervision">Individual Supervision</a></li>
-          <li><a href="for-therapists.html#group">Small Group — Supervision</a></li>
+          <li><a href="for-therapists.html#group">Small Group Supervision</a></li>
           <li><a href="for-therapists.html#healing-relationships">Healing Relationships</a></li>
         </ul></div>
         <div class="fc2"><h4>Information</h4><ul>
@@ -563,13 +563,13 @@ async function sendFormspree(e, subject, okMsg){
   try{
     const res=await fetch('https://formspree.io/f/xrpglpyp',{method:'POST',body:JSON.stringify(fields),headers:{'Accept':'application/json','Content-Type':'application/json'}});
     if(res.ok){ sf(okMsg); form.reset(); }
-    else sf('Something went wrong — please email claireratcliffetherapy@gmail.com directly.');
-  }catch(err){ sf('Something went wrong — please email claireratcliffetherapy@gmail.com directly.'); }
+    else sf('Something went wrong. Please email claireratcliffetherapy@gmail.com directly.');
+  }catch(err){ sf('Something went wrong. Please email claireratcliffetherapy@gmail.com directly.'); }
   btn.textContent=original; btn.disabled=false;
 }
-function sendContactForm(e){ sendFormspree(e,'Website Enquiry — Claire Ratcliffe Psychotherapy','Thank you — your message has been received. Claire will be in touch within 2 working days.'); }
-function submitIntensiveEnquiry(e){ sendFormspree(e,'Couples Intensive Enquiry — Claire Ratcliffe Psychotherapy','Your enquiry has been received. Claire will be in touch within 2 working days.'); }
-function submitSupervisionEnquiry(e){ sendFormspree(e,'Small Group Supervision Enquiry — Claire Ratcliffe Psychotherapy','Thank you — your enquiry has been received. Claire will be in touch within 2 working days.'); }
+function sendContactForm(e){ sendFormspree(e,'Website Enquiry | Claire Ratcliffe Psychotherapy','Thank you, your message has been received. Claire will be in touch within 2 working days.'); }
+function submitIntensiveEnquiry(e){ sendFormspree(e,'Couples Intensive Enquiry | Claire Ratcliffe Psychotherapy','Your enquiry has been received. Claire will be in touch within 2 working days.'); }
+function submitSupervisionEnquiry(e){ sendFormspree(e,'Small Group Supervision Enquiry | Claire Ratcliffe Psychotherapy','Thank you, your enquiry has been received. Claire will be in touch within 2 working days.'); }
 
 // Nav scroll effect
 window.addEventListener('scroll',()=>{

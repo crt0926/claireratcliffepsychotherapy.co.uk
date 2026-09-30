@@ -128,7 +128,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2}
 .pr p{color:var(--mid);margin-bottom:.9rem;font-size:.9rem;line-height:1.88}
 .pr ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:.7rem 0}
 .pr ul li{display:flex;align-items:flex-start;gap:.65rem;font-size:.87rem;color:var(--mid)}
-.pr ul li::before{content:'—';color:var(--border);flex-shrink:0;margin-top:.1rem}
+.pr ul li::before{content:'·';color:var(--border);flex-shrink:0;margin-top:.1rem}
 
 /* PRICE CARD */
 .pc{background:var(--off);padding:2rem;border-top:3px solid var(--sage)}
@@ -162,7 +162,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2}
 .ds .lbl{color:var(--sage-lt)}
 .ds ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
 .ds ul li{font-size:.87rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.65rem}
-.ds ul li::before{content:'—';color:rgba(255,255,255,.25);flex-shrink:0}
+.ds ul li::before{content:'·';color:rgba(255,255,255,.25);flex-shrink:0}
 .ss{background:var(--sage);padding:4.5rem 0}
 .ss h2{color:var(--white)}
 .ss p{color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.88;margin-bottom:.9rem}
@@ -198,7 +198,7 @@ input:invalid{border-color:#e0a0a0}
 .cr input[type=checkbox]{width:14px;height:14px;flex-shrink:0;margin-top:.22rem;accent-color:var(--sage)}
 .cr label{font-size:.83rem;color:var(--mid)}
 
-/* BOOKING — simplified */
+/* BOOKING, simplified */
 .bk-wrap{max-width:860px;margin:0 auto}
 .bk-select-wrap{padding:3rem 0 0}
 .bk-select-wrap label{display:block;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
@@ -445,7 +445,7 @@ nav{top:4px}
       <div class="dv"></div>
       <div class="cd"><strong>Email</strong><a href="mailto:claireratcliffetherapy@gmail.com">claireratcliffetherapy@gmail.com</a></div>
       <div class="cd"><strong>Phone</strong><a href="tel:07830906822">07830 906822</a></div>
-      <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-top:1.2rem">Whether you're looking for therapy, enquiring about an intensive, joining a supervision group or asking about Healing Relationships — get in touch and I'll help you find the right route.</p>
+      <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-top:1.2rem">Whether you're looking for therapy, enquiring about an intensive, joining a supervision group or asking about Healing Relationships. Get in touch and I'll help you find the right route.</p>
       <div style="margin-top:2rem">
         <span class="lbl">Find me online</span>
         <div class="sp">
@@ -459,7 +459,7 @@ nav{top:4px}
       </div>
       <div style="background:var(--off);padding:1.5rem;border-left:2px solid var(--sage);margin-top:2rem">
         <span class="lbl">WPA Insurance</span>
-        <p style="font-size:.88rem;color:var(--mid);line-height:1.8">Do you hold a policy with WPA Insurance? I am registered with them — please send an enquiry before booking directly, and mention your WPA policy, so we can arrange things correctly for you.</p>
+        <p style="font-size:.88rem;color:var(--mid);line-height:1.8">Do you hold a policy with WPA Insurance? I am registered with them. Please send an enquiry before booking directly, and mention your WPA policy, so we can arrange things correctly for you.</p>
       </div>
     </div>
     <div>
@@ -469,8 +469,8 @@ nav{top:4px}
         <div class="fr"><div class="fg"><label for="cf-name">First name *</label><input type="text" required id="cf-name" name="first_name"/></div><div class="fg"><label for="cf-lname">Last name *</label><input type="text" required id="cf-lname" name="last_name"/></div></div>
         <div class="fg"><label for="cf-email">Email *</label><input type="email" required id="cf-email" name="email"/></div>
         <div class="fg"><label for="cf-phone">Phone</label><input type="tel" id="cf-phone" name="phone"/></div>
-        <div class="fg"><label for="cf-enquiry">I am enquiring about</label><select id="cf-enquiry" name="enquiring_about"><option value="">Please select</option><option>Individual therapy</option><option>Couples / relationship therapy</option><option>Couples therapy intensive</option><option>Clinical supervision (individual)</option><option>Small Group — Supervision</option><option>Healing Relationships (coming 2027)</option><option>Something else</option></select></div>
-        <div class="fg"><label for="cf-message">Your message</label><textarea id="cf-message" name="message" required placeholder="Tell me a little about what you're looking for — or just say hello."></textarea></div>
+        <div class="fg"><label for="cf-enquiry">I am enquiring about</label><select id="cf-enquiry" name="enquiring_about"><option value="">Please select</option><option>Individual therapy</option><option>Couples / relationship therapy</option><option>Couples therapy intensive</option><option>Clinical supervision (individual)</option><option>Small Group Supervision</option><option>Healing Relationships (coming 2027)</option><option>Something else</option></select></div>
+        <div class="fg"><label for="cf-message">Your message</label><textarea id="cf-message" name="message" required placeholder="Tell me a little about what you're looking for, or just say hello."></textarea></div>
         <div class="cr"><input type="checkbox" id="cl1" name="marketing_consent" value="yes"><label for="cl1">I would like to receive marketing updates from Claire Ratcliffe Psychotherapy. I can unsubscribe at any time.</label></div>
         <p class="fn">Data processed in accordance with GDPR and our <a href="privacy-policy.html" style="color:var(--sage);cursor:pointer">privacy policy</a>.</p>
         <br><button type="submit" class="btn bdk">Send message →</button>
@@ -494,7 +494,7 @@ nav{top:4px}
         </ul></div>
         <div class="fc2"><h4>For Therapists</h4><ul>
           <li><a href="for-therapists.html#supervision">Individual Supervision</a></li>
-          <li><a href="for-therapists.html#group">Small Group — Supervision</a></li>
+          <li><a href="for-therapists.html#group">Small Group Supervision</a></li>
           <li><a href="for-therapists.html#healing-relationships">Healing Relationships</a></li>
         </ul></div>
         <div class="fc2"><h4>Information</h4><ul>
@@ -575,13 +575,13 @@ async function sendFormspree(e, subject, okMsg){
   try{
     const res=await fetch('https://formspree.io/f/xrpglpyp',{method:'POST',body:JSON.stringify(fields),headers:{'Accept':'application/json','Content-Type':'application/json'}});
     if(res.ok){ sf(okMsg); form.reset(); }
-    else sf('Something went wrong — please email claireratcliffetherapy@gmail.com directly.');
-  }catch(err){ sf('Something went wrong — please email claireratcliffetherapy@gmail.com directly.'); }
+    else sf('Something went wrong. Please email claireratcliffetherapy@gmail.com directly.');
+  }catch(err){ sf('Something went wrong. Please email claireratcliffetherapy@gmail.com directly.'); }
   btn.textContent=original; btn.disabled=false;
 }
-function sendContactForm(e){ sendFormspree(e,'Website Enquiry — Claire Ratcliffe Psychotherapy','Thank you — your message has been received. Claire will be in touch within 2 working days.'); }
-function submitIntensiveEnquiry(e){ sendFormspree(e,'Couples Intensive Enquiry — Claire Ratcliffe Psychotherapy','Your enquiry has been received. Claire will be in touch within 2 working days.'); }
-function submitSupervisionEnquiry(e){ sendFormspree(e,'Small Group Supervision Enquiry — Claire Ratcliffe Psychotherapy','Thank you — your enquiry has been received. Claire will be in touch within 2 working days.'); }
+function sendContactForm(e){ sendFormspree(e,'Website Enquiry | Claire Ratcliffe Psychotherapy','Thank you, your message has been received. Claire will be in touch within 2 working days.'); }
+function submitIntensiveEnquiry(e){ sendFormspree(e,'Couples Intensive Enquiry | Claire Ratcliffe Psychotherapy','Your enquiry has been received. Claire will be in touch within 2 working days.'); }
+function submitSupervisionEnquiry(e){ sendFormspree(e,'Small Group Supervision Enquiry | Claire Ratcliffe Psychotherapy','Thank you, your enquiry has been received. Claire will be in touch within 2 working days.'); }
 
 // Nav scroll effect
 window.addEventListener('scroll',()=>{
